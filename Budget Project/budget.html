@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team Budgect Planner App</title>
+    </head>
+    <body style="background-color: lightslategray;">
+    <header>
+         <h1 style=" background-color: burlywood;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         margin: 30px 10px;
+         cursor: pointer;
+         font-size: 50px;
+         margin-left:500px;
+         margin-bottom:100px;
+         border:solid black 5px;">BUDGET PLANNER</h1>
+    </header>
+        <script>
+                ar=new Array();
+            function addDetails() {
+               
+                var n=parseInt(prompt("Enter the number of element"));
+                //var a=[];
+                for (let i=0;i<n;i++)
+                {
+                    var a=parseInt(prompt("Enter the Price of the Product"));
+                    ar.push(a);
+                }
+              
+        
+            }
+        
+
+            function checkDetails() {
+                var total=0;
+                for(let i=0;i<ar.length;i++)
+                {
+                   var total=total+ar[i];
+
+                }
+                document.write("Total Price is Rupee ",  total)
+
+    }
+    </script>
+    <button name="simple_button" style="background-color: plum;
+    border: none;
+    color: rgb(14, 12, 12);
+    padding: 25px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px 10px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left:400px; " onclick="addDetails()">Add Details</button>
+    <button style="background-color:plum ; 
+    border: none;
+    color: rgb(14, 12, 12);
+    padding: 25px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px 10px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left:300px;" onclick="checkDetails()">Check Details</button>
+</body>
+</html>
+
+

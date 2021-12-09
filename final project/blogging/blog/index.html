@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div class="my-navigation-container">
+            <nav>
+                <img class='logo' src="../blog/logo.jpg" alt="blog">
+                    <ul>
+                        <li>
+                            <a href="../blog/index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="../blog/article.html">Post Article</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+            </nav>  
+        </div> 
+
+    
+    <h1 style="text-align: center;font-size: 50px;font-family:cursive;">Welcome to Blogging</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="main">
+        
+        </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+         var user = JSON.parse(localStorage.getItem('user'));
+         console.log(user);
+         const container = document.getElementById("main")
+         let new_blog;
+        for (var keys in user) {
+            var obj = user[keys];
+            console.log(obj)
+            new_blog = `<div style="background-color:cadetblue; color:black ;margin-top:10px;border: 1px solid black;" >
+                <h5 style="text-align:left; padding:5px;"><strong>Author Name:</strong><br>${keys}</h5>
+                <p style="text-align:left; padding-left:5px;"><strong>Article Description:<br></strong>${obj}</p>
+                </div> `;
+            container.innerHTML += new_blog;
+          }
+          var resetValue =""; 
+          localStorage.setItem("user", resetValue);
+        </script>
+</body>
+</html>

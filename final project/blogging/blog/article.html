@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url('../blog/article.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    
+    }
+</style>
+<body>
+    <div class="header" style="font-family: cursive;font-size: 40px;">
+        <h1 style="text-align: center;">Add Details</h1>
+    </div>    
+    <div class="container" style="font-family: cursive;font-size:30px;color: tomato;">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fName" name="firstname" placeholder="Your First name" ><br>
+            <label for ="Descrption">Description</label><br>
+            <textarea id="Description" name="Description" placeholder="Description about your Article" ></textarea><br>
+            <button style="background-color:cornflowerblue;font-size: 25px;" type="submit" formmethod="post" onclick="addnewarticle()">POST</button> <br>    
+        <a href="index.html" style="font-size: 20px;"> Back to home  </a>
+    </div>
+    <script src="blog.js"></script>
+    
+</body>
+</html>

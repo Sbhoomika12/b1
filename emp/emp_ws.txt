@@ -1,0 +1,16 @@
+Employee training score:
+
+There is a employee training details we need to find the following:
+   1. We need to display the employee who failed in trem1 passing marks=37
+      command for count: db.emp.find( { term1: { $lt: 37 } } ).count()
+      command for details: db.emp.find( { term1: { $lt: 37 } } )
+
+   2. We need display the average score of employees for term1
+      command:  db.emp.aggregate([{$group:{'_id':'term1',average:{$avg:'$term1'}}}])
+    
+   3.We need to display all employee details who passed in all three terms
+      command for details:db.emp.find({"term1":{$gt:37},"term2":{$gt:37},"term3":{$gt:37}}).pretty()
+      command for count:db.emp.find({"term1":{$gt:37},"term2":{$gt:37},"term3":{$gt:37}}).count()
+
+   4.We need display the average score of employees
+      command:db.emp.aggregate({$project:{avg_emp:{$avg:["$term1","$term2","$term3"]}}})
